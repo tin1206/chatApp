@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <%= link_to 'New Chatroom', new_chatroom_path %>
+  </div>
+  <ul class="list-group list-group-flush chat-list">
+    <% @chatrooms.each do |chatroom| %>
+    <li class="list-group-item">
+      <%= link_to chatroom.users.where.not(id: current_user.id).last.username, chatrooms_path(chatroom: chatroom.id)%>
+    </li>
+    <%end%>
+  </ul>
+</div>

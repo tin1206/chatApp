@@ -1,0 +1,18 @@
+<div class="chat-container">
+  <div class="row">
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-sm-4">
+          <%= render 'chatrooms_list'%>
+        </div>
+
+        <div class="col-sm-8">
+          <%if params[:chatroom].present?%>
+            <%= render 'messages/messages_list' %>
+            <%= render 'messages/form', message: @message  %>
+            <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

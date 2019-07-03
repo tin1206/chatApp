@@ -1,0 +1,9 @@
+<%= form_with(model: chatroom, local: true) do |form| %>
+  <div class="field">
+    <%= form.select :contact, current_user.contact_users.collect {|c| [c.username, c.id]}, include_blank: true%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

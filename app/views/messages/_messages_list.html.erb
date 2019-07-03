@@ -1,0 +1,21 @@
+<div class="message-container">
+  <div class="row">
+    <div class="col-sm-12">
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="messages-list">
+          <ul>
+            <% @messages.each do |message| %>
+            <li> <%= message.body %> </li>
+            <% end %>
+          </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
